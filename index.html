@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+  <title>Dadu Virtual</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding-top: 50px;
+      background-color: #f0f0f0;
+    }
+
+    #dice {
+      font-size: 100px;
+      margin: 30px;
+    }
+
+    button {
+      padding: 15px 30px;
+      font-size: 18px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #388E3C;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎲 Dadu Virtual</h1>
+  <div id="dice">🎲</div>
+  <button onclick="rollDice()">Kocok Dadu!</button>
+
+  <script>
+    function rollDice() {
+      const dice = document.getElementById('dice');
+      const angka = Math.floor(Math.random() * 6) + 1;
+      const emojiDadu = {
+        1: "⚀",
+        2: "⚁",
+        3: "⚂",
+        4: "⚃",
+        5: "⚄",
+        6: "⚅"
+      };
+
+      dice.textContent = emojiDadu[angka];
+    }
+  </script>
+
+</body>
+</html>
